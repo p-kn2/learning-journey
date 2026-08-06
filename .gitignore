@@ -10,8 +10,8 @@ crash.log
 crash.*.log
 
 # Variable files containing secrets
-*.tfvars
-*.tfvars.json
+# *.tfvars
+# *.tfvars.json
 
 # Override files
 override.tf
