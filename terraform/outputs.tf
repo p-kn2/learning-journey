@@ -14,6 +14,9 @@ output "default_vpc_id" {
   value = data.aws_vpc.default.id
 }
 
-output "public_ip" {
-    value = aws_instance.my_ec2.public_ip
+output "public_ip" {  
+  value = {
+    for k, v in aws_instance.my_ec2 :
+    k => v.public_ip
+  }
 }
