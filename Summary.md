@@ -51,3 +51,7 @@ Yes, for custom Terraform modules, organizations typically maintain the module c
 
 spring boot interview : 
 In one of my projects, we deployed a Java Spring Boot application using a Jenkins-based CI/CD pipeline. Developers pushed code to Git, which triggered Jenkins. Jenkins built the application using Maven, executed SonarQube code quality analysis, built a Docker image, and performed a Trivy vulnerability scan. If no High or Critical vulnerabilities were found, the image was pushed to the container registry. The application was then deployed to Kubernetes using Deployment and Service manifests. We used ConfigMaps for application configuration and Kubernetes commands for troubleshooting deployments. The underlying AWS infrastructure was provisioned and maintained using Terraform. My role was primarily around supporting the CI/CD process, monitoring deployments, reviewing scan results, troubleshooting Kubernetes issues, and coordinating release activities.
+
+My primary experience is with Java/Spring Boot-based applications, but I have worked in DevOps environments where application technology was not a constraint. I am comfortable supporting CI/CD, Docker, Kubernetes, AWS, and deployment processes for both Java and .NET/C# applications, and I can quickly adapt to project-specific build tools and workflows.
+
+
