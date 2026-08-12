@@ -4,10 +4,6 @@ I integrated Trivy into Jenkins CI/CD pipelines after the Docker image build sta
 
 
 GitHub : 
-We follow a feature-branch based Git workflow. Developers create separate feature branches from the main development branch. Once development is completed, a Pull Request is raised and code review is performed. After approval, the changes are merged into the develop branch. Jenkins automatically triggers CI pipelines for build, testing, SonarQube analysis, and security scans. For releases, code is merged into the main/master branch and deployed to higher environments. Hotfix branches are created from production when critical issues need immediate fixes.
-
-
-We followed a fork-based Git workflow. I would first fork the upstream repository, keep my origin main branch synchronized with the upstream main branch, and then create feature branches from my origin main branch. After completing development and testing, I would push the changes to my fork and raise a Pull Request to the upstream repository for review and merge
 
 We used a forking workflow along with feature branches. Each developer worked on their own forked repository. We synchronized our fork's main branch with the upstream main branch and created feature branches for development. Changes were submitted through Pull Requests and reviewed before merging into the upstream repository..
 
@@ -16,3 +12,14 @@ Kubernetes :
 
 
 My experience is primarily operational and support-focused rather than cluster administration. I have worked with Kubernetes deployments, pods, services, ingress configurations, and troubleshooting application issues. I have used kubectl extensively to check pod status, logs, deployments, and rollout activities while supporting CI/CD deployments from Jenkins.
+
+
+ConfigMap:
+We used ConfigMaps to externalize application configuration such as environment variables, database hostnames, ports, API URLs, and logging levels. This allowed us to update configuration without rebuilding Docker images and kept the deployment manifests reusable across environments. Also, remember ConfigMap is for non-sensitive data, while Secrets are used for passwords, tokens, and API keys.
+
+Q: Difference between ConfigMap and Secret?
+
+A:
+
+ConfigMap → Non-sensitive data (URLs, ports, environment names).
+Secret → Sensitive data (passwords, tokens, certificates). Often stored as base64-encoded values in Kubernetes.
